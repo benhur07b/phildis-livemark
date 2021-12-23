@@ -1,6 +1,6 @@
 data: data/disasters.csv
 order:
-  - [3, 'desc']
+  - [4, 'desc']
 autoWidth: false
 columns:
   - name: Local Name
@@ -11,24 +11,24 @@ columns:
     data: type
     type: string
     width: 15%
-  - name: Families
-    data: affected_families
+  - name: Houses (Full)
+    data: damaged_houses_full
     type: num-fmt
     width: 10%
-  - name: Person
-    data: affected_persons
+  - name: Houses (Partial)
+    data: damaged_houses_partial
     type: num-fmt
     width: 10%
-  - name: Dead
-    data: dead
+  - name: Agri (in MIL)
+    data: damaged_properties_agri
     type: num-fmt
     width: 10%
-  - name: Injured
-    data: injured
+  - name: Infra (in MIL)
+    data: damaged_properties_infra
     type: num-fmt
     width: 10%
-  - name: Missing
-    data: missing
+  - name: Private (in MIL)
+    data: damaged_properties_private
     type: num-fmt
     width: 10%
   - name: Date
