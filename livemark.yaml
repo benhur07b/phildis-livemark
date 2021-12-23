@@ -1,0 +1,24 @@
+brand:
+  text: PHIL-DIS
+
+site:
+  text: Philippines Disaster Information System Project
+
+about:
+  text: A website of Philippine disaster data built using Livemark
+
+topics:
+  selector: h2
+
+pages:
+  items:
+    - path: index
+      name: Home
+    - path: pages/data
+      name: Get Data
+    - path: pages/contrib-data
+      name: Contribute Data
+    - path: pages/glossary
+      name: Disaster Dictionary
+    - path: blog/index
+      name: PhilDIS Blog
