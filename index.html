@@ -1172,6 +1172,30 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
 </style>
 <style>
 
+.livemark-table {
+    font-size: 13px;
+  }
+  
+  .livemark-table th {
+    padding: 10px 2px !important;
+  }
+  
+  .livemark-table td {
+    padding: 10px 5px !important;
+  }
+  
+  .livemark-table th {
+    background-color: #fff !important;
+    font-weight: bold !important;
+  }
+  
+  .livemark-table tr:nth-child(odd) td {
+    background-color: #f8f8f8 !important;
+  }
+
+</style>
+<style>
+
 #livemark-brand {
   color: #888;
 }
@@ -1818,8 +1842,8 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
       </a>
           </li>
         <li class="primary  ">
-      <a href="pages/contrib-data.html" class="primary">
-        Contribute Data
+      <a href="pages/contribute.html" class="primary">
+        Contribute
       </a>
           </li>
         <li class="primary  ">
@@ -1843,7 +1867,7 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
 <div id="livemark-main">
 <div id="livemark-notes">
   Written in <a href="https://livemark.frictionlessdata.io" target="_blank"> Livemark </a><br>
-  (2022-01-07 00:02)
+  (2022-01-07 02:11)
 </div>
 
 <h1>Philippines Disaster Information System (PHIL-DIS) Project</h1>
@@ -1855,16 +1879,39 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
 <h2>Status</h2>
 <p>PHIL-DIS currently has information on: <strong>350</strong> disaster events from <strong>1897</strong> to <strong>2017</strong>. </p>
 <p><a href="/pages/contrib-data.html">Help us build a free, open, accurate, and comprehensive Philippine disaster database.</a></p>
-<h2>Disasters over time</h2>
-<h2>Disasters per type</h2>
-<p>Here are the total number of disasters per type in PHIL-DIS:</p>
+<h2>Disaster event timeline</h2>
+<p>Here is a timeline of disaster events in the Philippines according to data in PHIL-DIS: </p>
 <div class="livemark-chart" style="overflow-x: auto">
   <div id="livemark-chart-1">
   </div>
 </div>
 <script>
 document.addEventListener("DOMContentLoaded", function(){
-  vegaEmbed('#livemark-chart-1', JSON.parse('{"data": {"url": "data/tabular/disasters_list_all.csv"}, "height": 600, "width": 600, "mark": {"type": "bar", "cornerRadiusEnd": 2, "tooltip": true, "height": {"band": 0.8}}, "encoding": {"x": {"aggregate": "count", "title": "disasters", "axis": {"grid": false, "labelFontSize": 13}}, "y": {"field": "type", "type": "ordinal", "title": false, "sort": "-x", "axis": {"labelFontSize": 13}}}}'))
+  vegaEmbed('#livemark-chart-1', JSON.parse('{"data": {"url": "data/tabular/disasters_list_all.csv"}, "height": 400, "width": 800, "mark": {"type": "bar", "cornerRadiusEnd": 2, "tooltip": true, "width": {"band": 0.8}}, "encoding": {"x": {"timeUnit": "year", "field": "date_year", "type": "ordinal", "title": "year"}, "y": {"aggregate": "count", "title": "disasters"}, "color": {"field": "type"}}}'))
+})
+</script>
+
+<h3>Timeline of tropical cyclones</h3>
+<p>Here is a timeline of typhoons in the Philippines according to data in PHIL-DIS:  </p>
+<div class="livemark-chart" style="overflow-x: auto">
+  <div id="livemark-chart-2">
+  </div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+  vegaEmbed('#livemark-chart-2', JSON.parse('{"height": 400, "width": 800, "data": {"url": "data/tabular/disasters_list_all.csv"}, "transform": [{"filter": "datum.type==\'Tropical Cyclone\'"}], "mark": {"type": "bar", "cornerRadiusEnd": 2, "tooltip": true, "width": {"band": 0.8}}, "encoding": {"x": {"timeUnit": "year", "field": "date_year", "type": "ordinal", "title": "year"}, "y": {"aggregate": "count", "title": "disasters"}, "color": {"field": "type"}}}'))
+})
+</script>
+
+<h2>Disasters per type</h2>
+<p>Here are the total number of disasters per type in PHIL-DIS:</p>
+<div class="livemark-chart" style="overflow-x: auto">
+  <div id="livemark-chart-3">
+  </div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+  vegaEmbed('#livemark-chart-3', JSON.parse('{"data": {"url": "data/tabular/disasters_list_all.csv"}, "height": 600, "width": 600, "mark": {"type": "bar", "cornerRadiusEnd": 2, "tooltip": true, "height": {"band": 0.8}}, "encoding": {"x": {"aggregate": "count", "title": "disasters", "field": "type", "type": "quantitative", "axis": {"grid": false, "labelFontSize": 13}}, "y": {"field": "type", "type": "ordinal", "title": false, "sort": "-x", "axis": {"labelFontSize": 13}}}}'))
 })
 </script>
 
@@ -1898,6 +1945,11 @@ University of the Philippines Diliman</p>
 
 <div id="livemark-links">
   <ul>
+        <li>
+      <a href="http://geog.upd.edu.ph" target="_blank">
+        UP Department of Geography
+      </a>
+    </li>
         <li>
       <a href="https://github.com/benhur07b/phildis-livemark/issues" target="_blank">
         Report
@@ -2254,37 +2306,37 @@ document.addEventListener("DOMContentLoaded", function () {
           'name': 'Philippines Disaster Information System (PHIL-DIS) Project',
           'path': 'index',
           'relpath': 'index',
-          'text': "# Philippines Disaster Information System (PHIL-DIS) Project ```yaml remark type: primary text: PHIL-DIS is a continuous work in progress. The data provided by PHIL-DIS is only as accurate and precise as its sources\u2014e.g. official government reports. ``` The Philippines Disaster Information System (PHIL-DIS) was developed to establish a database for disasters in the Philippines that explicitly includes spatial information. PHIL-DIS aims to gather data on disaster events from official government reports, map disaster events and their patterns in the country, produce a web-based platform that has a capacity to display textual, tabular, visual and spatial information on disaster events, and formulate a template that can be used to systematically gather data on disaster events. ## Status PHIL-DIS currently has information on: **350** disaster events from **1897** to **2017**. [Help us build a free, open, accurate, and comprehensive Philippine disaster database.](/pages/contrib-data.html) ## Disasters over time ## Disasters per type Here are the total number of disasters per type in PHIL-DIS: ```yaml chart data: url: data/tabular/disasters_list_all.csv height: 600 width: 600 mark: type: bar cornerRadiusEnd: 2 tooltip: true height: band: 0.8 encoding: x: aggregate: count title: disasters axis: grid: false labelFontSize: 13 y: field: type type: ordinal title: false sort: -x axis: labelFontSize: 13 ``` ## Contact us DEPARTMENT OF GEOGRAPHY College of Social Sciences and Philosophy University of the Philippines Diliman",
+          'text': "# Philippines Disaster Information System (PHIL-DIS) Project ```yaml remark type: primary text: PHIL-DIS is a continuous work in progress. The data provided by PHIL-DIS is only as accurate and precise as its sources\u2014e.g. official government reports. ``` The Philippines Disaster Information System (PHIL-DIS) was developed to establish a database for disasters in the Philippines that explicitly includes spatial information. PHIL-DIS aims to gather data on disaster events from official government reports, map disaster events and their patterns in the country, produce a web-based platform that has a capacity to display textual, tabular, visual and spatial information on disaster events, and formulate a template that can be used to systematically gather data on disaster events. ## Status PHIL-DIS currently has information on: **350** disaster events from **1897** to **2017**. [Help us build a free, open, accurate, and comprehensive Philippine disaster database.](/pages/contrib-data.html) ## Disaster event timeline Here is a timeline of disaster events in the Philippines according to data in PHIL-DIS: ```yaml chart data: url: data/tabular/disasters_list_all.csv height: 400 width: 800 mark: type: bar cornerRadiusEnd: 2 tooltip: true width: band: 0.8 encoding: x: timeUnit: year field: date_year type: ordinal title: year y: aggregate: count title: disasters color: field: type ``` ### Timeline of tropical cyclones Here is a timeline of typhoons in the Philippines according to data in PHIL-DIS: ```json chart { \"height\": 400, \"width\": 800, \"data\": {\"url\": \"data/tabular/disasters_list_all.csv\"}, \"transform\": [ { \"filter\": \"datum.type==\u0027Tropical Cyclone\u0027\" } ], \"mark\": { \"type\": \"bar\", \"cornerRadiusEnd\": 2, \"tooltip\": true, \"width\": { \"band\": 0.8 } }, \"encoding\": { \"x\": { \"timeUnit\": \"year\", \"field\": \"date_year\", \"type\": \"ordinal\", \"title\": \"year\" }, \"y\": { \"aggregate\": \"count\", \"title\": \"disasters\" }, \"color\": { \"field\": \"type\" } } } ``` ## Disasters per type Here are the total number of disasters per type in PHIL-DIS: ```yaml chart data: url: data/tabular/disasters_list_all.csv height: 600 width: 600 mark: type: bar cornerRadiusEnd: 2 tooltip: true height: band: 0.8 encoding: x: aggregate: count title: disasters field: type type: quantitative axis: grid: false labelFontSize: 13 y: field: type type: ordinal title: false sort: -x axis: labelFontSize: 13 ``` ## Contact us DEPARTMENT OF GEOGRAPHY College of Social Sciences and Philosophy University of the Philippines Diliman",
       },
           'pages/ncr': {
           'name': 'Metro Manila',
           'path': 'pages/ncr',
           'relpath': 'pages/ncr',
-          'text': "# Metro Manila Info about disasters in Metro Manila",
+          'text': "# Metro Manila ## Number of disaster events ## Number of affected families and persons ## Number of deaths, injuries, and missing persons ## Number of damaged houses ## Amount of damage to agricultural, infrastructure, and private property",
       },
           'pages/provinces': {
           'name': 'Provinces',
           'path': 'pages/provinces',
           'relpath': 'pages/provinces',
-          'text': "# Provinces Info about disasters per province",
+          'text': "# Provinces ## Number of disaster events ## Number of affected families and persons ## Number of deaths, injuries, and missing persons ## Number of damaged houses ## Amount of damage to agricultural, infrastructure, and private property",
       },
           'pages/data': {
           'name': 'Get Data',
           'path': 'pages/data',
           'relpath': 'pages/data',
-          'text': "# Get Data ## Disaster events in the Philippines ```yaml remark type: primary text: A dataset of disaster events that contains both the disaster_provinces and disaster_ncr data. Digitized from Office of Civil Defense reports ``` Get it here: The dataset contains the following information: ## Disaster events in the provinces ```yaml remark type: primary text: A dataset of disaster events that contains information on disaster events in the Philippine provinces. Digitized from Office of Civil Defense reports ``` Get it here: The dataset contains the following information: ## Disaster events in Metro Manila ```yaml remark type: primary text: A dataset of disaster events that contains information on disaster events in Metro Manila. Digitized from Office of Civil Defense reports ``` Get it here: The dataset contains the following information:",
+          'text': "# Get Data ## List of disaster events ```yaml remark type: primary text: A list of disaster events in the Philippines. Digitized from Office of Civil Defense reports ``` ### Get it here: [CSV](../data/tabular/disasters_list_all.csv), [.ODS](#), [.XLSX](#) The dataset contains the following information: - **disaster_id** - unique disaster identifier in PHIL-DIS - **name_int** - international name of the disaster - **name_local** - local name of the disaster - **type** - main type of the disaster - **subtype** - subtype of the disaster - **date_start** - start date of the disaster - **date_end** - end date of the disaster ## Disaster events in the provinces ```yaml remark type: primary text: A dataset of disaster events that contains information regarding affected provinces. Digitized from Office of Civil Defense reports ``` ### Get it here: [CSV](../data/tabular/disasters_events_provinces.csv), [.ODS](#), [.XLSX](#) The dataset contains the following information: - All the primary disaster information found in the disaster list dataset - **psgc** - Philippine Standard Geographic Code of the affected province - **psgc_ph** - same as psgc but with a \"PH\" prefix - **province** - name of the province - **affected_families** - number of affected families - **affected_persons** - number of affected persons - **dead** - number of people who died - **injured** - number of people who were injured - **missing** - number of people who went missing - **damaged_houses_full** - number of completely damaged/destroyed houses - **damaged_houses_partial** - number of partially damaged houses - **damaged_properties_agri** - estimated damage to agricultural properties (in Millions) - **damaged_properties_infra** - estimated damage to infrastructure properties (in Millions) - **damaged_properties_private** - estimated damage to private properties (in Millions) - **damage_total** - estimated total damage (in Millions) ## Disaster events in Metro Manila ```yaml remark type: primary text: A dataset of disaster events that contains information regarding affected areas in Metro Manila. Digitized from Office of Civil Defense reports ``` ### Get it here: [CSV](../data/tabular/disasters_events_ncr.csv), [.ODS](#), [.XLSX](#) The dataset contains the following information: - All the primary disaster information found in the disaster list dataset - **psgc** - Philippine Standard Geographic Code of the affected city or municipality - **psgc_ph** - same as psgc but with a \"PH\" prefix - **municity** - name of the city or municipality - **affected_families** - number of affected families - **affected_persons** - number of affected persons - **dead** - number of people who died - **injured** - number of people who were injured - **missing** - number of people who went missing - **damaged_houses_full** - number of completely damaged/destroyed houses - **damaged_houses_partial** - number of partially damaged houses - **damaged_properties_agri** - estimated damage to agricultural properties (in Millions) - **damaged_properties_infra** - estimated damage to infrastructure properties (in Millions) - **damaged_properties_private** - estimated damage to private properties (in Millions) - **damage_total** - estimated total damage (in Millions) ## Disaster events in the Philippines ```yaml remark type: primary text: A dataset of disaster events that contains both the disaster_provinces and disaster_ncr data. Digitized from Office of Civil Defense reports ``` ### Get it here: [CSV](../data/tabular/disasters_events_all.csv), [.ODS](#), [.XLSX](#) The dataset contains the following information: - All the primary disaster information found in the disaster list dataset - **psgc** - Philippine Standard Geographic Code of the affected area - **psgc_ph** - same as psgc but with a \"PH\" prefix - **province_municity** - name of the province, city, or municipality - **affected_families** - number of affected families - **affected_persons** - number of affected persons - **dead** - number of people who died - **injured** - number of people who were injured - **missing** - number of people who went missing - **damaged_houses_full** - number of completely damaged/destroyed houses - **damaged_houses_partial** - number of partially damaged houses - **damaged_properties_agri** - estimated damage to agricultural properties (in Millions) - **damaged_properties_infra** - estimated damage to infrastructure properties (in Millions) - **damaged_properties_private** - estimated damage to private properties (in Millions) - **damage_total** - estimated total damage (in Millions)",
       },
-          'pages/contrib-data': {
-          'name': 'Contribute Disaster Data',
-          'path': 'pages/contrib-data',
-          'relpath': 'pages/contrib-data',
-          'text': "# Contribute Disaster Data ## Help clean and update Philippines disaster data We are always open to volunteers who want to contribute to building a free, open, accurate, and comprehensive Philippine disaster database. Contact us if you want to help. DEPARTMENT OF GEOGRAPHY College of Social Sciences and Philosophy University of the Philippines Diliman",
+          'pages/contribute': {
+          'name': 'Contribute to PHIL-DIS',
+          'path': 'pages/contribute',
+          'relpath': 'pages/contribute',
+          'text': "# Contribute to PHIL-DIS ## Help clean and update Philippines disaster data We are always open to volunteers who want to contribute to building a free, open, accurate, and comprehensive Philippine disaster database. Contact us if you want to help. DEPARTMENT OF GEOGRAPHY College of Social Sciences and Philosophy University of the Philippines Diliman ## Improve the website, charts, etc. Found a bug, typo, or want to improve the PHIL-DIS website? Send us a Pull Request on GitHub. The PHIL-DIS website is built with Livemark which is open source.",
       },
           'pages/glossary': {
-          'name': 'Glossary of Disaster Terms',
+          'name': 'Disaster Dictionary',
           'path': 'pages/glossary',
           'relpath': 'pages/glossary',
-          'text': "# Glossary of Disaster Terms ### Accident Automobile, rail, aircraft, or navigation accidents. Limited to accidents induced by natural phenomena, such as landslides, earthquakes, hurricanes, rain, etc. Includes transportation accidents generating spills or leaks or harmful substances, regardless of the cause. ### Airburst An explosion of a comet or meteoroid within the Earth\u2019s atmosphere without striking the ground. *A type of extraterrestrial hazard.* ### Alluvion Torrential water flows dragging large amounts of solid material (pebbles, stones, and rock blocks) common in dry regions river beds which are produced by heavy rain. Equivalent to the term \u201chuaico\u201d used in Peru. ### Animal Incident Human encounters with dangerous or exotic animals in both urban and rural environments. *A type of biological hazard.* ### Ash Fall Fine (less than 4mm) in diameter unconsolidated volcanic debris blown into the atmosphere during an eruption; can remain airborne for long periods of time and travel considerable distances from the sources. *A type of geophysical hazard.* ### Avalanche A large mass of loosened earth material, snow, or ice that slides, flows, or falls rapidly down an mountainside under the force of gravity. *A type of hydrological hazard* ### Bacterial Disease An unusual increase in the number of incidents caused by the exposure to bacteria through skin contact, ingestion or inhalation. Examples include salmonella, MSRA, and cholera, among others. *A type of biological hazard.* ### Biological Hazard A hazard caused by the exposure to living organisms and their toxic substances (eg. Venom, mold) or vector-borne diseases that they may carry. Examples are venomous wildlife and insects, poisonous plants, and mosquitoes carrying disease-causing agents such as parasites, bacteria, or viruses (e.g. malaria).",
+          'text': "# Disaster Dictionary ## List of disaster types and subtypes ### Main type **Main type** is... Subtypes include: - **subtype 1** - definition... ## Glossary of disaster-related terms ### Accident Automobile, rail, aircraft, or navigation accidents. Limited to accidents induced by natural phenomena, such as landslides, earthquakes, hurricanes, rain, etc. Includes transportation accidents generating spills or leaks or harmful substances, regardless of the cause. ### Airburst An explosion of a comet or meteoroid within the Earth\u2019s atmosphere without striking the ground. *A type of extraterrestrial hazard.* ### Alluvion Torrential water flows dragging large amounts of solid material (pebbles, stones, and rock blocks) common in dry regions river beds which are produced by heavy rain. Equivalent to the term \u201chuaico\u201d used in Peru. ### Animal Incident Human encounters with dangerous or exotic animals in both urban and rural environments. *A type of biological hazard.* ### Ash Fall Fine (less than 4mm) in diameter unconsolidated volcanic debris blown into the atmosphere during an eruption; can remain airborne for long periods of time and travel considerable distances from the sources. *A type of geophysical hazard.* ### Avalanche A large mass of loosened earth material, snow, or ice that slides, flows, or falls rapidly down an mountainside under the force of gravity. *A type of hydrological hazard* ### Bacterial Disease An unusual increase in the number of incidents caused by the exposure to bacteria through skin contact, ingestion or inhalation. Examples include salmonella, MSRA, and cholera, among others. *A type of biological hazard.* ### Biological Hazard A hazard caused by the exposure to living organisms and their toxic substances (eg. Venom, mold) or vector-borne diseases that they may carry. Examples are venomous wildlife and insects, poisonous plants, and mosquitoes carrying disease-causing agents such as parasites, bacteria, or viruses (e.g. malaria).",
       },
           'blog/index': {
           'name': 'PhilDIS Blog',

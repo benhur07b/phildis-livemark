@@ -1,0 +1,20 @@
+.livemark-table {
+    font-size: 13px;
+  }
+  
+  .livemark-table th {
+    padding: 10px 2px !important;
+  }
+  
+  .livemark-table td {
+    padding: 10px 5px !important;
+  }
+  
+  .livemark-table th {
+    background-color: #fff !important;
+    font-weight: bold !important;
+  }
+  
+  .livemark-table tr:nth-child(odd) td {
+    background-color: #f8f8f8 !important;
+  }

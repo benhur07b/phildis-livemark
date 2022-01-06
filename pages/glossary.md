@@ -1,5 +1,13 @@
-# Glossary of Disaster Terms
+# Disaster Dictionary
 
+## List of disaster types and subtypes
+### Main type
+**Main type** is... 
+
+Subtypes include:
+- **subtype 1** - definition...
+
+## Glossary of disaster-related terms
 ### Accident
 Automobile, rail, aircraft, or navigation accidents. Limited to accidents induced by natural phenomena, such as landslides, earthquakes, hurricanes, rain, etc. Includes transportation accidents generating spills or leaks or harmful substances, regardless of the cause.
 

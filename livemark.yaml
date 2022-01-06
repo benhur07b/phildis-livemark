@@ -3,6 +3,8 @@ brand:
 
 site:
   text: Philippines Disaster Information System Project
+  styles:
+    - style.css
 
 about:
   text: A website of Philippine disaster data built using Livemark
@@ -20,9 +22,14 @@ pages:
       name: Provinces
     - path: pages/data
       name: Get Data
-    - path: pages/contrib-data
-      name: Contribute Data
+    - path: pages/contribute
+      name: Contribute
     - path: pages/glossary
       name: Disaster Dictionary
     - path: blog/index
       name: PhilDIS Blog
+
+links:
+  items:
+    - path: http://geog.upd.edu.ph
+      name: UP Department of Geography

@@ -1,33 +1,98 @@
 # Get Data
 
-## Disaster events in the Philippines
+## List of disaster events
 
 ```yaml remark
 type: primary
-text: A dataset of disaster events that contains both the disaster_provinces and disaster_ncr data. Digitized from Office of Civil Defense reports
+text: A list of disaster events in the Philippines. Digitized from Office of Civil Defense reports
 ```
-Get it here:
+### Get it here: [CSV](../data/tabular/disasters_list_all.csv), [.ODS](#), [.XLSX](#)
 
 The dataset contains the following information:
 
+ - **disaster_id** - unique disaster identifier in PHIL-DIS
+ - **name_int** - international name of the disaster
+ - **name_local** - local name of the disaster
+ - **type** - main type of the disaster
+ - **subtype** - subtype of the disaster
+ - **date_start** - start date of the disaster
+ - **date_end** - end date of the disaster
+ 
 
 ## Disaster events in the provinces
 
 ```yaml remark
 type: primary
-text: A dataset of disaster events that contains information on disaster events in the Philippine provinces. Digitized from Office of Civil Defense reports
+text: A dataset of disaster events that contains information regarding affected provinces. Digitized from Office of Civil Defense reports
 ```
-Get it here:
+### Get it here: [CSV](../data/tabular/disasters_events_provinces.csv), [.ODS](#), [.XLSX](#)
 
 The dataset contains the following information:
+- All the primary disaster information found in the disaster list dataset
+- **psgc** - Philippine Standard Geographic Code of the affected province
+- **psgc_ph** - same as psgc but with a "PH" prefix
+- **province** - name of the province
+- **affected_families**	- number of affected families
+- **affected_persons** - number of affected persons
+- **dead** - number of people who died
+- **injured** - number of people who were injured
+- **missing** - number of people who went missing
+- **damaged_houses_full** - number of completely damaged/destroyed houses
+- **damaged_houses_partial** - number of partially damaged houses
+- **damaged_properties_agri** - estimated damage to agricultural properties (in Millions)
+- **damaged_properties_infra** - estimated damage to infrastructure properties (in Millions)	
+- **damaged_properties_private** - estimated damage to private properties (in Millions)
+- **damage_total** - estimated total damage (in Millions)
 
 
 ## Disaster events in Metro Manila
 
 ```yaml remark
 type: primary
-text: A dataset of disaster events that contains information on disaster events in Metro Manila. Digitized from Office of Civil Defense reports
+text: A dataset of disaster events that contains information regarding affected areas in Metro Manila. Digitized from Office of Civil Defense reports
 ```
-Get it here:
+### Get it here: [CSV](../data/tabular/disasters_events_ncr.csv), [.ODS](#), [.XLSX](#)
 
 The dataset contains the following information:
+- All the primary disaster information found in the disaster list dataset
+- **psgc** - Philippine Standard Geographic Code of the affected city or municipality
+- **psgc_ph** - same as psgc but with a "PH" prefix
+- **municity** - name of the city or municipality
+- **affected_families**	- number of affected families
+- **affected_persons** - number of affected persons
+- **dead** - number of people who died
+- **injured** - number of people who were injured
+- **missing** - number of people who went missing
+- **damaged_houses_full** - number of completely damaged/destroyed houses
+- **damaged_houses_partial** - number of partially damaged houses
+- **damaged_properties_agri** - estimated damage to agricultural properties (in Millions)
+- **damaged_properties_infra** - estimated damage to infrastructure properties (in Millions)	
+- **damaged_properties_private** - estimated damage to private properties (in Millions)
+- **damage_total** - estimated total damage (in Millions)
+
+## Disaster events in the Philippines
+
+```yaml remark
+type: primary
+text: A dataset of disaster events that contains both the disaster_provinces and disaster_ncr data. Digitized from Office of Civil Defense reports
+```
+### Get it here: [CSV](../data/tabular/disasters_events_all.csv), [.ODS](#), [.XLSX](#)
+
+The dataset contains the following information:
+- All the primary disaster information found in the disaster list dataset
+- **psgc** - Philippine Standard Geographic Code of the affected area
+- **psgc_ph** - same as psgc but with a "PH" prefix
+- **province_municity** - name of the province, city, or municipality
+- **affected_families**	- number of affected families
+- **affected_persons** - number of affected persons
+- **dead** - number of people who died
+- **injured** - number of people who were injured
+- **missing** - number of people who went missing
+- **damaged_houses_full** - number of completely damaged/destroyed houses
+- **damaged_houses_partial** - number of partially damaged houses
+- **damaged_properties_agri** - estimated damage to agricultural properties (in Millions)
+- **damaged_properties_infra** - estimated damage to infrastructure properties (in Millions)	
+- **damaged_properties_private** - estimated damage to private properties (in Millions)
+- **damage_total** - estimated total damage (in Millions)
+
+

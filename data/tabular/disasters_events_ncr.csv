@@ -1,4 +1,4 @@
-disaster_id,name_int,name_local,type,subtype,date_start,date_end,year,month,psgc,ph_psgc,municity,affected_families,affected_persons,dead,injured,missing,damaged_houses_full,damaged_houses_partial,damaged_properties_agri,damaged_properties_infra,damaged_properties_private,damage_total
+disaster_id,name_int,name_local,type,subtype,date_start,date_end,date_year,date_month,psgc,ph_psgc,municity,affected_families,affected_persons,dead,injured,missing,damaged_houses_full,damaged_houses_partial,damaged_properties_agri,damaged_properties_infra,damaged_properties_private,damage_total
 TropicalCyclone_1997-08-18_TyphoonIbiang,Typhoon Winnie,Typhoon Ibiang,Tropical Cyclone,"Heavy rains, Flooding, Lahar flow",1997-08-18,1997-08-19,1997,08,130000000,PH130000000,NCR,,,,,,,,,,,
 TropicalCyclone_1997-05-02_TyphoonBining,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,137602000,PH137602000,City of Makati,403,2015,3,,,,,,,,
 TropicalCyclone_1997-05-02_TyphoonBining,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,137401000,PH137401000,City of Mandaluyong,275,1647,,,,,,,,,

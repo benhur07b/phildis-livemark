@@ -1,0 +1,33 @@
+{
+    "height": 400,
+    "width": 800,
+    "data": {"url": "data/tabular/disasters_list_all.csv"},
+    "transform": [
+        {
+            "filter": {% if type %}"datum.type=='{{ type }}'"{% else %}"datum.type"{% endif %}
+        } 
+    ],
+    "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 2,
+        "tooltip": true,
+        "width": {
+            "band": 0.8
+        }
+    },
+    "encoding": {
+        "x": {
+            "timeUnit": "year",
+            "field": "date_year",
+            "type": "ordinal",
+            "title": "year"
+        },
+        "y": {
+            "aggregate": "count",
+            "title": "disasters"
+        },
+        "color": {
+            "field": "type"
+        }
+    }
+}

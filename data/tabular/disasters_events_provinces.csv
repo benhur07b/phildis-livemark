@@ -1,4 +1,4 @@
-disaster_id,name_int,name_local,type,subtype,date_start,date_end,year,month,psgc,ph_psgc,province,affected_families,affected_persons,dead,injured,missing,damaged_houses_full,damaged_houses_partial,damaged_properties_agri,damaged_properties_infra,damaged_properties_private,damage_total
+disaster_id,name_int,name_local,type,subtype,date_start,date_end,date_year,date_month,psgc,ph_psgc,province,affected_families,affected_persons,dead,injured,missing,damaged_houses_full,damaged_houses_partial,damaged_properties_agri,damaged_properties_infra,damaged_properties_private,damage_total
 TropicalCyclone_1997-10-25_TyphoonNarsing,Typhoon Ivan,Typhoon Narsing,Tropical Cyclone,"Heavy rains, Flooding",1997-10-25,,1997,10,148100000,PH148100000,Apayao,0,0,0,0,0,12,710,5.19,7.90,,
 TropicalCyclone_1997-10-25_TyphoonNarsing,Typhoon Ivan,Typhoon Narsing,Tropical Cyclone,"Heavy rains, Flooding",1997-10-25,,1997,10,143200000,PH143200000,Kalinga,1128,5640,0,0,0,0,4,2.84,15.14,,
 TropicalCyclone_1997-10-25_TyphoonNarsing,Typhoon Ivan,Typhoon Narsing,Tropical Cyclone,"Heavy rains, Flooding",1997-10-25,,1997,10,012800000,PH012800000,Ilocos Norte,362,1222,0,0,0,0,0,0.30,1.70,,
@@ -336,8 +336,8 @@ Human-InducedHazard_2004-10-11_Fire,,,Human-Induced Hazard,Fire,2004-10-11,,2004
 Human-InducedHazard_2004-10-03_Fire,,,Human-Induced Hazard,Fire,2004-10-03,,2004,10,135400000,PH135400000,NCR,,,,,,,,,,,
 Human-InducedHazard__Bus-TricycleCrash,,,Human-Induced Hazard,Bus - Tricycle Crash,,,,,045600000,PH045600000,Quezon,,,,,,,,,,,
 Human-InducedHazard__PlaneCrash,,,Human-Induced Hazard,Plane Crash,,,,,175300000,PH175300000,Palawan,,,,,,,,,,,
-Tornado_10-18_Tornado,,,Tornado,,10-18,,10-1,18,153800000,PH153800000,Maguindanao,,,,,,,,,,,
-Flooding_10-15_FlashFlood,,,Flooding,Flash Flood,10-15,,10-1,15,153800000,PH153800000,Maguindanao,,,,,,,,,,,
+Tornado_10-18_Tornado,,,Tornado,,10-18,,10-1,,153800000,PH153800000,Maguindanao,,,,,,,,,,,
+Flooding_10-15_FlashFlood,,,Flooding,Flash Flood,10-15,,10-1,,153800000,PH153800000,Maguindanao,,,,,,,,,,,
 Human-InducedHazard__ArmedConflictInMaguindanao,,,Human-Induced Hazard,Armed Conflict in Maguindanao,,,,,153800000,PH153800000,Maguindanao,,,,,,,,,,,
 Human-InducedHazard_2006-08-11_M/TSolar1OilSpillageGuimaras,,"M/T Solar 1 Oil Spillage, Guimaras",Human-Induced Hazard,,2006-08-11,,2006,08,067900000,PH067900000,Guimaras,8580,42109,,11,2,,,,,1.06,
 "Human-InducedHazard_2005-02-24_DeporteesFromSabah,Malaysia",,"Deported from Sabah, Malaysia",Human-Induced Hazard,,2005-02-24,,2005,02,157000000,PH157000000,Tawi-Tawi,,25,,,,,,,,,
