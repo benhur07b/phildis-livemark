@@ -1414,8 +1414,69 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
 </style>
 <style>
 
+#livemark-rating {
+  height: 46px;
+}
+
+#livemark-rating iframe {
+  margin-top: -5px;
+  border: none;
+  opacity: 0.5;
+}
+
+</style>
+<style>
+
 #livemark-about {
   color: #888;
+}
+
+</style>
+<style>
+
+#livemark-links {
+  color: #888;
+}
+
+#livemark-links ul {
+  overflow: hidden;
+  position: relative;
+  padding-left: 0;
+  margin: 0;
+}
+
+#livemark-links li {
+  list-style: none;
+}
+
+#livemark-links a {
+  display: inline-block;
+  color: currentColor;
+  position: relative;
+  width: 100%;
+  line-height: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#livemark-links a:hover {
+  color: #80b2e6;
+}
+
+#livemark-links a[target="_blank"]:after {
+  content: "\f35d";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  vertical-align: text-top;
+  text-decoration: none;
+  display: inline-block;
+  color: #aaa;
+  font-size: 12px;
+  margin-left: -2px;
+}
+
+#livemark-links a[target="_blank"]:hover:after {
+  color: #80b2e6;
 }
 
 </style>
@@ -1742,6 +1803,16 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
       </a>
           </li>
         <li class="primary  ">
+      <a href="../pages/ncr.html" class="primary">
+        Metro Manila
+      </a>
+          </li>
+        <li class="primary  ">
+      <a href="../pages/provinces.html" class="primary">
+        Provinces
+      </a>
+          </li>
+        <li class="primary  ">
       <a href="../pages/data.html" class="primary">
         Get Data
       </a>
@@ -1790,11 +1861,36 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
 </div>
 <div id="livemark-right">
 
+<div id="livemark-rating">
+  <iframe src="https://ghbtns.com/github-btn.html?user=benhur07b&amp;repo=phildis-livemark&amp;type=star&amp;count=true&amp;size=large" width="160px" height="30px" title="GitHub">
+  </iframe>
+</div>
+
 <div id="livemark-about">
   <div>
     A website of Philippine disaster data built using Livemark
   </div>
 </div>
+
+<div id="livemark-links">
+  <ul>
+        <li>
+      <a href="https://github.com/benhur07b/phildis-livemark/issues" target="_blank">
+        Report
+      </a>
+    </li>
+        <li>
+      <a href="https://github.com/benhur07b/phildis-livemark/fork" target="_blank">
+        Fork
+      </a>
+    </li>
+        <li>
+      <a href="https://github.com/benhur07b/phildis-livemark/edit/main/blog/index.md" target="_blank">
+        Edit
+      </a>
+    </li>
+      
+</ul></div>
 </div>
 <script src="https://unpkg.com/lodash@4.17.21/lodash.min.js"></script>
 <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js"></script>
@@ -2131,7 +2227,19 @@ document.addEventListener("DOMContentLoaded", function () {
           'name': 'Philippines Disaster Information System (PHIL-DIS) Project',
           'path': 'index',
           'relpath': '../index',
-          'text': "# Philippines Disaster Information System (PHIL-DIS) Project ```yaml remark type: primary text: PHIL-DIS is a continuous work in progress. The data provided by PHIL-DIS is only as accurate and precise as its sources\u2014e.g. official government reports. ``` The Philippines Disaster Information System (PHIL-DIS) was developed to establish a database for disasters in the Philippines that explicitly includes spatial information. PHIL-DIS aims to gather data on disaster events from official government reports, map disaster events and their patterns in the country, produce a web-based platform that has a capacity to display textual, tabular, visual and spatial information on disaster events, and formulate a template that can be used to systematically gather data on disaster events. ## Status PHIL-DIS currently has information on: **351** disaster events from **1897** to **2017**. [Help us build a free, open, accurate, and comprehensive Philippine disaster database.](/pages/contrib-data.html) ## Disasters by Type ```yaml table data: data/disasters.csv order: - [3, \u0027desc\u0027] autoWidth: false columns: - name: Local Name data: name_local type: string width: 35% - name: Int. Name data: name_international type: string width: 35% - name: Type data: type type: string width: 20% - name: Year data: date_year type: num width: 10% className: [\u0027dt-right\u0027] ``` ## Disasters by Date ```yaml table data: data/disasters.csv order: - [4, \u0027desc\u0027] autoWidth: false columns: - name: Local Name data: name_local type: string width: 35% - name: Type data: type type: string width: 20% - name: Year data: date_year type: num width: 10% className: [\u0027dt-right\u0027] - name: Month data: date_month type: num width: 10% className: [\u0027dt-right\u0027] - name: Date data: date_start type: date width: 15% className: [\u0027dt-right\u0027] ``` ## Disasters by Affected Families and Persons ```yaml table data: data/disasters.csv order: - [3, \u0027desc\u0027] autoWidth: false columns: - name: Local Name data: name_local type: string width: 30% - name: Type data: type type: string width: 15% - name: Families data: affected_families type: num-fmt width: 10% - name: Person data: affected_persons type: num-fmt width: 10% - name: Dead data: dead type: num-fmt width: 10% - name: Injured data: injured type: num-fmt width: 10% - name: Missing data: missing type: num-fmt width: 10% - name: Date data: date_start type: date width: 5% className: [\u0027dt-right\u0027] ``` ## Disasters by Damaged Properties ```yaml table data: data/disasters.csv order: - [3, \u0027desc\u0027] autoWidth: false columns: - name: Local Name data: name_local type: string width: 30% - name: Type data: type type: string width: 15% - name: Families data: affected_families type: num-fmt width: 10% - name: Person data: affected_persons type: num-fmt width: 10% - name: Dead data: dead type: num-fmt width: 10% - name: Injured data: injured type: num-fmt width: 10% - name: Missing data: missing type: num-fmt width: 10% - name: Date data: date_start type: date width: 5% className: [\u0027dt-right\u0027] ```",
+          'text': "# Philippines Disaster Information System (PHIL-DIS) Project ```yaml remark type: primary text: PHIL-DIS is a continuous work in progress. The data provided by PHIL-DIS is only as accurate and precise as its sources\u2014e.g. official government reports. ``` The Philippines Disaster Information System (PHIL-DIS) was developed to establish a database for disasters in the Philippines that explicitly includes spatial information. PHIL-DIS aims to gather data on disaster events from official government reports, map disaster events and their patterns in the country, produce a web-based platform that has a capacity to display textual, tabular, visual and spatial information on disaster events, and formulate a template that can be used to systematically gather data on disaster events. ## Status PHIL-DIS currently has information on: **350** disaster events from **1897** to **2017**. [Help us build a free, open, accurate, and comprehensive Philippine disaster database.](/pages/contrib-data.html)",
+      },
+          'pages/ncr': {
+          'name': 'Metro Manila',
+          'path': 'pages/ncr',
+          'relpath': '../pages/ncr',
+          'text': "# Metro Manila Info about disasters in Metro Manila",
+      },
+          'pages/provinces': {
+          'name': 'Provinces',
+          'path': 'pages/provinces',
+          'relpath': '../pages/provinces',
+          'text': "# Provinces Info about disasters per province",
       },
           'pages/data': {
           'name': 'Get Data',

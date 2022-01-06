@@ -14,6 +14,10 @@ pages:
   items:
     - path: index
       name: Home
+    - path: pages/ncr
+      name: Metro Manila
+    - path: pages/provinces
+      name: Provinces
     - path: pages/data
       name: Get Data
     - path: pages/contrib-data

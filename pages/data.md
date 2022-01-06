@@ -4,19 +4,30 @@
 
 ```yaml remark
 type: primary
-text: A dataset based from digitized Office of Civil Defense reports.
+text: A dataset of disaster events that contains both the disaster_provinces and disaster_ncr data. Digitized from Office of Civil Defense reports
 ```
+Get it here:
 
-**Get it here: [CSV](../data/disasters.csv)**
+The dataset contains the following information:
 
-Includes the following information:
-- disaster_id (unique)
-- local name of disaster
-- international name of disaster
-- type of disaster
-- subtype of disaster
-- start date
-- end date
-- number of affected families and persons
-- number of people who died, was injured, or went missing
-- estimated damage to properties (agricultural, infrastructure, and private)
+
+## Disaster events in the provinces
+
+```yaml remark
+type: primary
+text: A dataset of disaster events that contains information on disaster events in the Philippine provinces. Digitized from Office of Civil Defense reports
+```
+Get it here:
+
+The dataset contains the following information:
+
+
+## Disaster events in Metro Manila
+
+```yaml remark
+type: primary
+text: A dataset of disaster events that contains information on disaster events in Metro Manila. Digitized from Office of Civil Defense reports
+```
+Get it here:
+
+The dataset contains the following information:
