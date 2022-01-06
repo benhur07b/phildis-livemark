@@ -1843,7 +1843,7 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
 <div id="livemark-main">
 <div id="livemark-notes">
   Written in <a href="https://livemark.frictionlessdata.io" target="_blank"> Livemark </a><br>
-  (2022-01-05 08:53)
+  (2022-01-07 00:02)
 </div>
 
 <h1>Philippines Disaster Information System (PHIL-DIS) Project</h1>
@@ -1855,6 +1855,19 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
 <h2>Status</h2>
 <p>PHIL-DIS currently has information on: <strong>350</strong> disaster events from <strong>1897</strong> to <strong>2017</strong>. </p>
 <p><a href="/pages/contrib-data.html">Help us build a free, open, accurate, and comprehensive Philippine disaster database.</a></p>
+<h2>Disasters over time</h2>
+<h2>Disasters per type</h2>
+<p>Here are the total number of disasters per type in PHIL-DIS:</p>
+<div class="livemark-chart" style="overflow-x: auto">
+  <div id="livemark-chart-1">
+  </div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+  vegaEmbed('#livemark-chart-1', JSON.parse('{"data": {"url": "data/tabular/disasters_list_all.csv"}, "height": 600, "width": 600, "mark": {"type": "bar", "cornerRadiusEnd": 2, "tooltip": true, "height": {"band": 0.8}}, "encoding": {"x": {"aggregate": "count", "title": "disasters", "axis": {"grid": false, "labelFontSize": 13}}, "y": {"field": "type", "type": "ordinal", "title": false, "sort": "-x", "axis": {"labelFontSize": 13}}}}'))
+})
+</script>
+
 <h2>Contact us</h2>
 <p><strong>DEPARTMENT OF GEOGRAPHY</strong><br>
 College of Social Sciences and Philosophy<br>
@@ -1963,6 +1976,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 </script>
+<script src="https://unpkg.com/vega@5.20.2/build/vega.min.js"></script>
+<script src="https://unpkg.com/vega-lite@5.1.0/build/vega-lite.min.js"></script>
+<script src="https://unpkg.com/vega-embed@6.18.2/build/vega-embed.min.js"></script>
 <script src="https://unpkg.com/tocbot@4.12.3/dist/tocbot.min.js"></script>
 <script>
 
@@ -2238,7 +2254,7 @@ document.addEventListener("DOMContentLoaded", function () {
           'name': 'Philippines Disaster Information System (PHIL-DIS) Project',
           'path': 'index',
           'relpath': 'index',
-          'text': "# Philippines Disaster Information System (PHIL-DIS) Project ```yaml remark type: primary text: PHIL-DIS is a continuous work in progress. The data provided by PHIL-DIS is only as accurate and precise as its sources\u2014e.g. official government reports. ``` The Philippines Disaster Information System (PHIL-DIS) was developed to establish a database for disasters in the Philippines that explicitly includes spatial information. PHIL-DIS aims to gather data on disaster events from official government reports, map disaster events and their patterns in the country, produce a web-based platform that has a capacity to display textual, tabular, visual and spatial information on disaster events, and formulate a template that can be used to systematically gather data on disaster events. ## Status PHIL-DIS currently has information on: **350** disaster events from **1897** to **2017**. [Help us build a free, open, accurate, and comprehensive Philippine disaster database.](/pages/contrib-data.html) ## Contact us DEPARTMENT OF GEOGRAPHY College of Social Sciences and Philosophy University of the Philippines Diliman",
+          'text': "# Philippines Disaster Information System (PHIL-DIS) Project ```yaml remark type: primary text: PHIL-DIS is a continuous work in progress. The data provided by PHIL-DIS is only as accurate and precise as its sources\u2014e.g. official government reports. ``` The Philippines Disaster Information System (PHIL-DIS) was developed to establish a database for disasters in the Philippines that explicitly includes spatial information. PHIL-DIS aims to gather data on disaster events from official government reports, map disaster events and their patterns in the country, produce a web-based platform that has a capacity to display textual, tabular, visual and spatial information on disaster events, and formulate a template that can be used to systematically gather data on disaster events. ## Status PHIL-DIS currently has information on: **350** disaster events from **1897** to **2017**. [Help us build a free, open, accurate, and comprehensive Philippine disaster database.](/pages/contrib-data.html) ## Disasters over time ## Disasters per type Here are the total number of disasters per type in PHIL-DIS: ```yaml chart data: url: data/tabular/disasters_list_all.csv height: 600 width: 600 mark: type: bar cornerRadiusEnd: 2 tooltip: true height: band: 0.8 encoding: x: aggregate: count title: disasters axis: grid: false labelFontSize: 13 y: field: type type: ordinal title: false sort: -x axis: labelFontSize: 13 ``` ## Contact us DEPARTMENT OF GEOGRAPHY College of Social Sciences and Philosophy University of the Philippines Diliman",
       },
           'pages/ncr': {
           'name': 'Metro Manila',
@@ -2256,7 +2272,7 @@ document.addEventListener("DOMContentLoaded", function () {
           'name': 'Get Data',
           'path': 'pages/data',
           'relpath': 'pages/data',
-          'text': "# Get Data ## Disaster events in the Philippines ```yaml remark type: primary text: A dataset based from digitized Office of Civil Defense reports. ``` **Get it here: [CSV](../data/disasters.csv)** Includes the following information: - disaster_id (unique) - local name of disaster - international name of disaster - type of disaster - subtype of disaster - start date - end date - number of affected families and persons - number of people who died, was injured, or went missing - estimated damage to properties (agricultural, infrastructure, and private)",
+          'text': "# Get Data ## Disaster events in the Philippines ```yaml remark type: primary text: A dataset of disaster events that contains both the disaster_provinces and disaster_ncr data. Digitized from Office of Civil Defense reports ``` Get it here: The dataset contains the following information: ## Disaster events in the provinces ```yaml remark type: primary text: A dataset of disaster events that contains information on disaster events in the Philippine provinces. Digitized from Office of Civil Defense reports ``` Get it here: The dataset contains the following information: ## Disaster events in Metro Manila ```yaml remark type: primary text: A dataset of disaster events that contains information on disaster events in Metro Manila. Digitized from Office of Civil Defense reports ``` Get it here: The dataset contains the following information:",
       },
           'pages/contrib-data': {
           'name': 'Contribute Disaster Data',

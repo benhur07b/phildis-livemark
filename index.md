@@ -12,6 +12,40 @@ PHIL-DIS currently has information on: **350** disaster events from **1897** to 
 
 [Help us build a free, open, accurate, and comprehensive Philippine disaster database.](/pages/contrib-data.html)
 
+## Disasters over time
+
+
+
+## Disasters per type
+Here are the total number of disasters per type in PHIL-DIS:
+
+```yaml chart
+data:
+    url: data/tabular/disasters_list_all.csv
+height: 600
+width: 600
+mark:
+    type: bar
+    cornerRadiusEnd: 2
+    tooltip: true
+    height:
+        band: 0.8
+encoding:
+    x:
+        aggregate: count
+        title: disasters
+        axis:
+            grid: false
+            labelFontSize: 13
+    y:
+        field: type
+        type: ordinal
+        title: false
+        sort: -x
+        axis:
+            labelFontSize: 13
+```
+
 ## Contact us
 <strong>DEPARTMENT OF GEOGRAPHY</strong><br>
 College of Social Sciences and Philosophy<br>
