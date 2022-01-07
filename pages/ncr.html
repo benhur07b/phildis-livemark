@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="None">
+<meta name="description" content="Here are the number of disaster events in NCR cities and municipalities according to data in PHIL-DIS:">
 <meta name="keywords" content="metro,manila">
 <link rel="icon" href="None">
 <title>Metro Manila | PHIL-DIS</title>
@@ -1301,6 +1301,7 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
 }
 
 </style>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
 <style>
 
 #livemark-topics {
@@ -1867,15 +1868,717 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
 <div id="livemark-main">
 <div id="livemark-notes">
   Written in <a href="https://livemark.frictionlessdata.io" target="_blank"> Livemark </a><br>
-  (2022-01-07 11:21)
+  (2022-01-07 16:55)
 </div>
 
 <h1>Metro Manila</h1>
 <h2>Disaster events</h2>
+<p>Here are the number of disaster events in NCR cities and municipalities according to data in PHIL-DIS:</p>
+<div class="livemark-table" style="overflow-x: auto">
+  <div style="width: 100%">
+    <table id="livemark-table-1">
+      <thead>
+        <tr>
+                    <th>PSGC</th>
+                    <th>City/Municipality</th>
+                    <th>Disaster events</th>
+                  </tr>
+      </thead>
+      <tbody>
+                <tr>
+                    <td>PH133900000</td>
+                    <td>City of Manila</td>
+                    <td>20</td>
+                  </tr>
+                <tr>
+                    <td>PH137401000</td>
+                    <td>City of Mandaluyong</td>
+                    <td>1</td>
+                  </tr>
+                <tr>
+                    <td>PH137402000</td>
+                    <td>City of Marikina</td>
+                    <td>14</td>
+                  </tr>
+                <tr>
+                    <td>PH137403000</td>
+                    <td>City of Pasig</td>
+                    <td>7</td>
+                  </tr>
+                <tr>
+                    <td>PH137404000</td>
+                    <td>Quezon City</td>
+                    <td>22</td>
+                  </tr>
+                <tr>
+                    <td>PH137405000</td>
+                    <td>San Juan City</td>
+                    <td>7</td>
+                  </tr>
+                <tr>
+                    <td>PH137501000</td>
+                    <td>Caloocan City</td>
+                    <td>10</td>
+                  </tr>
+                <tr>
+                    <td>PH137502000</td>
+                    <td>Malabon City</td>
+                    <td>10</td>
+                  </tr>
+                <tr>
+                    <td>PH137503000</td>
+                    <td>Navotas City</td>
+                    <td>10</td>
+                  </tr>
+                <tr>
+                    <td>PH137504000</td>
+                    <td>Valenzuela City</td>
+                    <td>13</td>
+                  </tr>
+                <tr>
+                    <td>PH137601000</td>
+                    <td>Las Piñas City</td>
+                    <td>6</td>
+                  </tr>
+                <tr>
+                    <td>PH137602000</td>
+                    <td>City of Makati</td>
+                    <td>7</td>
+                  </tr>
+                <tr>
+                    <td>PH137603000</td>
+                    <td>City of Muntinlupa</td>
+                    <td>9</td>
+                  </tr>
+                <tr>
+                    <td>PH137604000</td>
+                    <td>Parañaque City</td>
+                    <td>7</td>
+                  </tr>
+                <tr>
+                    <td>PH137605000</td>
+                    <td>Pasay City</td>
+                    <td>8</td>
+                  </tr>
+                <tr>
+                    <td>PH137606000</td>
+                    <td>Pateros</td>
+                    <td>5</td>
+                  </tr>
+                <tr>
+                    <td>PH137607000</td>
+                    <td>Taguig City</td>
+                    <td>9</td>
+                  </tr>
+              </tbody>
+      <tfoot>
+        <tr>
+                    <th>PSGC</th>
+                    <th>City/Municipality</th>
+                    <th>Disaster events</th>
+                  </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+  $('#livemark-table-1').DataTable(JSON.parse('{"order": [[2, "desc"]], "columns": [{"name": "PSGC", "data": "ph_psgc", "type": "string"}, {"name": "City/Municipality", "data": "municity", "type": "string"}, {"name": "Disaster events", "data": "disasters", "type": "num", "className": ["dt-right"]}], "columnDefs": [{"targets": "_all", "orderSequence": ["desc", "asc"]}]}'))
+})
+</script>
+
 <h2>Affected families and persons</h2>
+<p>Here are the total number of affected families and persons by disaster events in NCR according to data in PHIL-DIS:</p>
+<div class="livemark-table" style="overflow-x: auto">
+  <div style="width: 100%">
+    <table id="livemark-table-2">
+      <thead>
+        <tr>
+                    <th>PSGC</th>
+                    <th>City/Municipality</th>
+                    <th>Affected families</th>
+                    <th>Affected persons</th>
+                  </tr>
+      </thead>
+      <tbody>
+                <tr>
+                    <td>PH133900000</td>
+                    <td>City of Manila</td>
+                    <td>22316</td>
+                    <td>105614</td>
+                  </tr>
+                <tr>
+                    <td>PH137401000</td>
+                    <td>City of Mandaluyong</td>
+                    <td>275</td>
+                    <td>1647</td>
+                  </tr>
+                <tr>
+                    <td>PH137402000</td>
+                    <td>City of Marikina</td>
+                    <td>21416</td>
+                    <td>92507</td>
+                  </tr>
+                <tr>
+                    <td>PH137403000</td>
+                    <td>City of Pasig</td>
+                    <td>4640</td>
+                    <td>21711</td>
+                  </tr>
+                <tr>
+                    <td>PH137404000</td>
+                    <td>Quezon City</td>
+                    <td>13317</td>
+                    <td>63148</td>
+                  </tr>
+                <tr>
+                    <td>PH137405000</td>
+                    <td>San Juan City</td>
+                    <td>2779</td>
+                    <td>11750</td>
+                  </tr>
+                <tr>
+                    <td>PH137501000</td>
+                    <td>Caloocan City</td>
+                    <td>21597</td>
+                    <td>107711</td>
+                  </tr>
+                <tr>
+                    <td>PH137502000</td>
+                    <td>Malabon City</td>
+                    <td>12988</td>
+                    <td>61161</td>
+                  </tr>
+                <tr>
+                    <td>PH137503000</td>
+                    <td>Navotas City</td>
+                    <td>2283</td>
+                    <td>11483</td>
+                  </tr>
+                <tr>
+                    <td>PH137504000</td>
+                    <td>Valenzuela City</td>
+                    <td>9089</td>
+                    <td>36325</td>
+                  </tr>
+                <tr>
+                    <td>PH137601000</td>
+                    <td>Las Piñas City</td>
+                    <td>4103</td>
+                    <td>21521</td>
+                  </tr>
+                <tr>
+                    <td>PH137602000</td>
+                    <td>City of Makati</td>
+                    <td>1490</td>
+                    <td>7422</td>
+                  </tr>
+                <tr>
+                    <td>PH137603000</td>
+                    <td>City of Muntinlupa</td>
+                    <td>5314</td>
+                    <td>26357</td>
+                  </tr>
+                <tr>
+                    <td>PH137604000</td>
+                    <td>Parañaque City</td>
+                    <td>10429</td>
+                    <td>51244</td>
+                  </tr>
+                <tr>
+                    <td>PH137605000</td>
+                    <td>Pasay City</td>
+                    <td>8348</td>
+                    <td>40799</td>
+                  </tr>
+                <tr>
+                    <td>PH137606000</td>
+                    <td>Pateros</td>
+                    <td>843</td>
+                    <td>3693</td>
+                  </tr>
+                <tr>
+                    <td>PH137607000</td>
+                    <td>Taguig City</td>
+                    <td>4317</td>
+                    <td>20361</td>
+                  </tr>
+              </tbody>
+      <tfoot>
+        <tr>
+                    <th>PSGC</th>
+                    <th>City/Municipality</th>
+                    <th>Affected families</th>
+                    <th>Affected persons</th>
+                  </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+  $('#livemark-table-2').DataTable(JSON.parse('{"order": [[3, "desc"]], "columns": [{"name": "PSGC", "data": "ph_psgc", "type": "string"}, {"name": "City/Municipality", "data": "municity", "type": "string"}, {"name": "Affected families", "data": "affected_families", "type": "num-fmt", "className": ["dt-right"]}, {"name": "Affected persons", "data": "affected_persons", "type": "num-fmt", "className": ["dt-right"]}], "columnDefs": [{"targets": "_all", "orderSequence": ["desc", "asc"]}]}'))
+})
+</script>
+
 <h2>Deaths, injuries, and missing persons</h2>
+<p>Here are the total number of deaths, injuries, and missing persons because of disaster events in NCR according to data in PHIL-DIS:</p>
+<div class="livemark-table" style="overflow-x: auto">
+  <div style="width: 100%">
+    <table id="livemark-table-3">
+      <thead>
+        <tr>
+                    <th>PSGC</th>
+                    <th>City/Municipality</th>
+                    <th>Dead</th>
+                    <th>Injured</th>
+                    <th>Missing</th>
+                  </tr>
+      </thead>
+      <tbody>
+                <tr>
+                    <td>PH133900000</td>
+                    <td>City of Manila</td>
+                    <td>95</td>
+                    <td>37</td>
+                    <td>8</td>
+                  </tr>
+                <tr>
+                    <td>PH137401000</td>
+                    <td>City of Mandaluyong</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                  </tr>
+                <tr>
+                    <td>PH137402000</td>
+                    <td>City of Marikina</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>0</td>
+                  </tr>
+                <tr>
+                    <td>PH137403000</td>
+                    <td>City of Pasig</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>0</td>
+                  </tr>
+                <tr>
+                    <td>PH137404000</td>
+                    <td>Quezon City</td>
+                    <td>22</td>
+                    <td>9</td>
+                    <td>0</td>
+                  </tr>
+                <tr>
+                    <td>PH137405000</td>
+                    <td>San Juan City</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                  </tr>
+                <tr>
+                    <td>PH137501000</td>
+                    <td>Caloocan City</td>
+                    <td>6</td>
+                    <td>2</td>
+                    <td>0</td>
+                  </tr>
+                <tr>
+                    <td>PH137502000</td>
+                    <td>Malabon City</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>0</td>
+                  </tr>
+                <tr>
+                    <td>PH137503000</td>
+                    <td>Navotas City</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>0</td>
+                  </tr>
+                <tr>
+                    <td>PH137504000</td>
+                    <td>Valenzuela City</td>
+                    <td>4</td>
+                    <td>15</td>
+                    <td>0</td>
+                  </tr>
+                <tr>
+                    <td>PH137601000</td>
+                    <td>Las Piñas City</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                  </tr>
+                <tr>
+                    <td>PH137602000</td>
+                    <td>City of Makati</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>0</td>
+                  </tr>
+                <tr>
+                    <td>PH137603000</td>
+                    <td>City of Muntinlupa</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                  </tr>
+                <tr>
+                    <td>PH137604000</td>
+                    <td>Parañaque City</td>
+                    <td>18</td>
+                    <td>0</td>
+                    <td>1</td>
+                  </tr>
+                <tr>
+                    <td>PH137605000</td>
+                    <td>Pasay City</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>2</td>
+                  </tr>
+                <tr>
+                    <td>PH137606000</td>
+                    <td>Pateros</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>0</td>
+                  </tr>
+                <tr>
+                    <td>PH137607000</td>
+                    <td>Taguig City</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>0</td>
+                  </tr>
+              </tbody>
+      <tfoot>
+        <tr>
+                    <th>PSGC</th>
+                    <th>City/Municipality</th>
+                    <th>Dead</th>
+                    <th>Injured</th>
+                    <th>Missing</th>
+                  </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+  $('#livemark-table-3').DataTable(JSON.parse('{"order": [[2, "desc"]], "columns": [{"name": "PSGC", "data": "ph_psgc", "type": "string"}, {"name": "City/Municipality", "data": "municity", "type": "string"}, {"name": "Dead", "data": "dead", "type": "num-fmt", "className": ["dt-right"]}, {"name": "Injured", "data": "injured", "type": "num-fmt", "className": ["dt-right"]}, {"name": "Missing", "data": "missing", "type": "num-fmt", "className": ["dt-right"]}], "columnDefs": [{"targets": "_all", "orderSequence": ["desc", "asc"]}]}'))
+})
+</script>
+
 <h2>Damaged houses</h2>
+<p>Here are the total number of damaged houses because of disaster events in NCR according to data in PHIL-DIS:</p>
+<div class="livemark-table" style="overflow-x: auto">
+  <div style="width: 100%">
+    <table id="livemark-table-4">
+      <thead>
+        <tr>
+                    <th>PSGC</th>
+                    <th>City/Municipality</th>
+                    <th>Damaged houses (Full)</th>
+                    <th>Damaged houses (Partial)</th>
+                  </tr>
+      </thead>
+      <tbody>
+                <tr>
+                    <td>PH133900000</td>
+                    <td>City of Manila</td>
+                    <td>47</td>
+                    <td>15</td>
+                  </tr>
+                <tr>
+                    <td>PH137401000</td>
+                    <td>City of Mandaluyong</td>
+                    <td>0</td>
+                    <td>0</td>
+                  </tr>
+                <tr>
+                    <td>PH137402000</td>
+                    <td>City of Marikina</td>
+                    <td>0</td>
+                    <td>0</td>
+                  </tr>
+                <tr>
+                    <td>PH137403000</td>
+                    <td>City of Pasig</td>
+                    <td>6</td>
+                    <td>0</td>
+                  </tr>
+                <tr>
+                    <td>PH137404000</td>
+                    <td>Quezon City</td>
+                    <td>45</td>
+                    <td>0</td>
+                  </tr>
+                <tr>
+                    <td>PH137405000</td>
+                    <td>San Juan City</td>
+                    <td>0</td>
+                    <td>0</td>
+                  </tr>
+                <tr>
+                    <td>PH137501000</td>
+                    <td>Caloocan City</td>
+                    <td>1</td>
+                    <td>0</td>
+                  </tr>
+                <tr>
+                    <td>PH137502000</td>
+                    <td>Malabon City</td>
+                    <td>0</td>
+                    <td>0</td>
+                  </tr>
+                <tr>
+                    <td>PH137503000</td>
+                    <td>Navotas City</td>
+                    <td>0</td>
+                    <td>0</td>
+                  </tr>
+                <tr>
+                    <td>PH137504000</td>
+                    <td>Valenzuela City</td>
+                    <td>0</td>
+                    <td>0</td>
+                  </tr>
+                <tr>
+                    <td>PH137601000</td>
+                    <td>Las Piñas City</td>
+                    <td>0</td>
+                    <td>0</td>
+                  </tr>
+                <tr>
+                    <td>PH137602000</td>
+                    <td>City of Makati</td>
+                    <td>0</td>
+                    <td>0</td>
+                  </tr>
+                <tr>
+                    <td>PH137603000</td>
+                    <td>City of Muntinlupa</td>
+                    <td>0</td>
+                    <td>0</td>
+                  </tr>
+                <tr>
+                    <td>PH137604000</td>
+                    <td>Parañaque City</td>
+                    <td>0</td>
+                    <td>0</td>
+                  </tr>
+                <tr>
+                    <td>PH137605000</td>
+                    <td>Pasay City</td>
+                    <td>0</td>
+                    <td>0</td>
+                  </tr>
+                <tr>
+                    <td>PH137606000</td>
+                    <td>Pateros</td>
+                    <td>0</td>
+                    <td>80</td>
+                  </tr>
+                <tr>
+                    <td>PH137607000</td>
+                    <td>Taguig City</td>
+                    <td>0</td>
+                    <td>0</td>
+                  </tr>
+              </tbody>
+      <tfoot>
+        <tr>
+                    <th>PSGC</th>
+                    <th>City/Municipality</th>
+                    <th>Damaged houses (Full)</th>
+                    <th>Damaged houses (Partial)</th>
+                  </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+  $('#livemark-table-4').DataTable(JSON.parse('{"order": [[2, "desc"]], "columns": [{"name": "PSGC", "data": "ph_psgc", "type": "string"}, {"name": "City/Municipality", "data": "municity", "type": "string"}, {"name": "Damaged houses (Full)", "data": "damaged_houses_full", "type": "num-fmt", "className": ["dt-right"]}, {"name": "Damaged houses (Partial)", "data": "damaged_houses_partial", "type": "num-fmt", "className": ["dt-right"]}], "columnDefs": [{"targets": "_all", "orderSequence": ["desc", "asc"]}]}'))
+})
+</script>
+
 <h2>Damage to agricultural, infrastructure, and private property</h2>
+<p>Here are the estimated damage to properties because of disaster events in NCR according to data in PHIL-DIS:</p>
+<div class="livemark-table" style="overflow-x: auto">
+  <div style="width: 100%">
+    <table id="livemark-table-5">
+      <thead>
+        <tr>
+                    <th>PSGC</th>
+                    <th>City/Municipality</th>
+                    <th>Agricultural (in Mil)</th>
+                    <th>Intrastructure (in Mil)</th>
+                    <th>Private (in Mil)</th>
+                    <th>Total damage (in Mil)</th>
+                  </tr>
+      </thead>
+      <tbody>
+                <tr>
+                    <td>PH133900000</td>
+                    <td>City of Manila</td>
+                    <td>P 300</td>
+                    <td>4,911.45</td>
+                    <td>56.0</td>
+                    <td>13.45</td>
+                  </tr>
+                <tr>
+                    <td>PH137401000</td>
+                    <td>City of Mandaluyong</td>
+                    <td>0.00</td>
+                    <td>0.00</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                  </tr>
+                <tr>
+                    <td>PH137402000</td>
+                    <td>City of Marikina</td>
+                    <td>0.00</td>
+                    <td>0.00</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                  </tr>
+                <tr>
+                    <td>PH137403000</td>
+                    <td>City of Pasig</td>
+                    <td>0.00</td>
+                    <td>0.00</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                  </tr>
+                <tr>
+                    <td>PH137404000</td>
+                    <td>Quezon City</td>
+                    <td>0.00</td>
+                    <td>41.18</td>
+                    <td>0.0</td>
+                    <td>35.18</td>
+                  </tr>
+                <tr>
+                    <td>PH137405000</td>
+                    <td>San Juan City</td>
+                    <td>0.00</td>
+                    <td>0.00</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                  </tr>
+                <tr>
+                    <td>PH137501000</td>
+                    <td>Caloocan City</td>
+                    <td>0.00</td>
+                    <td>31.96</td>
+                    <td>0.0</td>
+                    <td>0.16</td>
+                  </tr>
+                <tr>
+                    <td>PH137502000</td>
+                    <td>Malabon City</td>
+                    <td>18.45</td>
+                    <td>0.00</td>
+                    <td>0.0</td>
+                    <td>18.45</td>
+                  </tr>
+                <tr>
+                    <td>PH137503000</td>
+                    <td>Navotas City</td>
+                    <td>0.00</td>
+                    <td>0.00</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                  </tr>
+                <tr>
+                    <td>PH137504000</td>
+                    <td>Valenzuela City</td>
+                    <td>0.00</td>
+                    <td>0.10</td>
+                    <td>0.0</td>
+                    <td>0.1</td>
+                  </tr>
+                <tr>
+                    <td>PH137601000</td>
+                    <td>Las Piñas City</td>
+                    <td>3.00</td>
+                    <td>0.18</td>
+                    <td>0.0</td>
+                    <td>3.18</td>
+                  </tr>
+                <tr>
+                    <td>PH137602000</td>
+                    <td>City of Makati</td>
+                    <td>2.59</td>
+                    <td>0.00</td>
+                    <td>0.0</td>
+                    <td>2.59</td>
+                  </tr>
+                <tr>
+                    <td>PH137603000</td>
+                    <td>City of Muntinlupa</td>
+                    <td>20.88</td>
+                    <td>0.10</td>
+                    <td>0.0</td>
+                    <td>20.98</td>
+                  </tr>
+                <tr>
+                    <td>PH137604000</td>
+                    <td>Parañaque City</td>
+                    <td>0.00</td>
+                    <td>0.00</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                  </tr>
+                <tr>
+                    <td>PH137605000</td>
+                    <td>Pasay City</td>
+                    <td>4.73</td>
+                    <td>1.89</td>
+                    <td>0.0</td>
+                    <td>6.62</td>
+                  </tr>
+                <tr>
+                    <td>PH137606000</td>
+                    <td>Pateros</td>
+                    <td>0.00</td>
+                    <td>0.00</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                  </tr>
+                <tr>
+                    <td>PH137607000</td>
+                    <td>Taguig City</td>
+                    <td>50.95</td>
+                    <td>0.00</td>
+                    <td>0.0</td>
+                    <td>50.95</td>
+                  </tr>
+              </tbody>
+      <tfoot>
+        <tr>
+                    <th>PSGC</th>
+                    <th>City/Municipality</th>
+                    <th>Agricultural (in Mil)</th>
+                    <th>Intrastructure (in Mil)</th>
+                    <th>Private (in Mil)</th>
+                    <th>Total damage (in Mil)</th>
+                  </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+  $('#livemark-table-5').DataTable(JSON.parse('{"order": [[2, "desc"]], "columns": [{"name": "PSGC", "data": "ph_psgc", "type": "string"}, {"name": "City/Municipality", "data": "municity", "type": "string"}, {"name": "Agricultural (in Mil)", "data": "damaged_properties_agri", "type": "num-fmt", "className": ["dt-right"]}, {"name": "Intrastructure (in Mil)", "data": "damaged_properties_infra", "type": "num-fmt", "className": ["dt-right"]}, {"name": "Private (in Mil)", "data": "damaged_properties_private", "type": "num-fmt", "className": ["dt-right"]}, {"name": "Total damage (in Mil)", "data": "damage_total", "type": "num-fmt", "className": ["dt-right"]}], "columnDefs": [{"targets": "_all", "orderSequence": ["desc", "asc"]}]}'))
+})
+</script>
 
 <div id="livemark-signs">
   <div>
@@ -1990,6 +2693,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 </script>
+<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
 <script src="https://unpkg.com/tocbot@4.12.3/dist/tocbot.min.js"></script>
 <script>
 
@@ -2265,13 +2969,13 @@ document.addEventListener("DOMContentLoaded", function () {
           'name': 'Philippines Disaster Information System (PHIL-DIS) Project',
           'path': 'index',
           'relpath': '../index',
-          'text': "# Philippines Disaster Information System (PHIL-DIS) Project ```yaml remark type: primary text: PHIL-DIS is a continuous work in progress. The data provided by PHIL-DIS is only as accurate and precise as its sources\u2014e.g. official government reports. ``` The Philippines Disaster Information System (PHIL-DIS) was developed to establish a database for disasters in the Philippines that explicitly includes spatial information. PHIL-DIS aims to gather data on disaster events from official government reports, map disaster events and their patterns in the country, produce a web-based platform that has a capacity to display textual, tabular, visual and spatial information on disaster events, and formulate a template that can be used to systematically gather data on disaster events. ## Status PHIL-DIS currently has information on: **350** disaster events from **1897** to **2017**. [Help us build a free, open, accurate, and comprehensive Philippine disaster database.](/pages/contrib-data.html) ## Disaster event timeline Number of disaster event data per year in PHIL-DIS: ```yaml chart data: url: data/tabular/disasters_list_all.csv height: 400 width: 800 mark: type: bar cornerRadiusEnd: 2 tooltip: true width: band: 0.8 encoding: x: timeUnit: year field: date_year type: ordinal title: year y: aggregate: count title: disasters color: field: type ``` ### Timeline of tropical cyclones Number of tropical cyclone disaster event data per year in PHIL-DIS: ```json chart { \"height\": 400, \"width\": 800, \"data\": {\"url\": \"data/tabular/disasters_list_all.csv\"}, \"transform\": [ { \"filter\": \"datum.type==\u0027Tropical Cyclone\u0027\" } ], \"mark\": { \"type\": \"bar\", \"cornerRadiusEnd\": 2, \"tooltip\": true, \"width\": { \"band\": 0.8 } }, \"encoding\": { \"x\": { \"timeUnit\": \"year\", \"field\": \"date_year\", \"type\": \"ordinal\", \"title\": \"year\" }, \"y\": { \"aggregate\": \"count\", \"title\": \"disasters\" }, \"color\": { \"field\": \"type\" } } } ``` ## Disasters per type Here are the total number of disasters per type in PHIL-DIS: ```yaml chart data: url: data/tabular/disasters_list_all.csv height: 600 width: 600 mark: type: bar cornerRadiusEnd: 2 tooltip: true height: band: 0.8 encoding: x: aggregate: count title: disasters field: type type: quantitative axis: grid: false labelFontSize: 13 y: field: type type: ordinal title: false sort: -x axis: labelFontSize: 13 ``` ## Contact us DEPARTMENT OF GEOGRAPHY College of Social Sciences and Philosophy University of the Philippines Diliman",
+          'text': "# Philippines Disaster Information System (PHIL-DIS) Project ```yaml remark type: primary text: PHIL-DIS is a continuous work in progress. The data provided by PHIL-DIS is only as accurate and precise as its sources\u2014e.g. official government reports. ``` The Philippines Disaster Information System (PHIL-DIS) was developed to establish a database for disasters in the Philippines that explicitly includes spatial information. PHIL-DIS aims to gather data on disaster events from official government reports, map disaster events and their patterns in the country, produce a web-based platform that has a capacity to display textual, tabular, visual and spatial information on disaster events, and formulate a template that can be used to systematically gather data on disaster events. ## Status PHIL-DIS currently has information on: **350** disaster events from **1897** to **2017**. [Help us build a free, open, accurate, and comprehensive Philippine disaster database.](/pages/contrib-data.html) ## Disaster event timeline Number of disaster event data per year in PHIL-DIS: ```json chart { \"height\": 400, \"width\": 800, \"data\": {\"url\": \"data/tabular/disasters_list_all.csv\"}, \"transform\": [ { \"filter\": \"datum.type\" } ], \"mark\": { \"type\": \"bar\", \"cornerRadiusEnd\": 2, \"tooltip\": true, \"width\": { \"band\": 0.8 } }, \"encoding\": { \"x\": { \"timeUnit\": \"year\", \"field\": \"date_year\", \"type\": \"ordinal\", \"title\": \"year\" }, \"y\": { \"aggregate\": \"count\", \"title\": \"disasters\" }, \"color\": { \"field\": \"type\" } } } ``` ### Timeline of tropical cyclones Number of tropical cyclone disaster event data per year in PHIL-DIS: ```json chart { \"height\": 400, \"width\": 800, \"data\": {\"url\": \"data/tabular/disasters_list_all.csv\"}, \"transform\": [ { \"filter\": \"datum.type==\u0027Tropical Cyclone\u0027\" } ], \"mark\": { \"type\": \"bar\", \"cornerRadiusEnd\": 2, \"tooltip\": true, \"width\": { \"band\": 0.8 } }, \"encoding\": { \"x\": { \"timeUnit\": \"year\", \"field\": \"date_year\", \"type\": \"ordinal\", \"title\": \"year\" }, \"y\": { \"aggregate\": \"count\", \"title\": \"disasters\" }, \"color\": { \"field\": \"type\" } } } ``` ## Disasters per type Here are the total number of disasters per type in PHIL-DIS: ```yaml chart data: url: data/tabular/disasters_list_all.csv height: 600 width: 600 mark: type: bar cornerRadiusEnd: 2 tooltip: true height: band: 0.8 encoding: x: aggregate: count title: disasters field: type type: quantitative axis: grid: false labelFontSize: 13 y: field: type type: ordinal title: false sort: -x axis: labelFontSize: 13 ``` ## Contact us DEPARTMENT OF GEOGRAPHY College of Social Sciences and Philosophy University of the Philippines Diliman",
       },
           'pages/ncr': {
           'name': 'Metro Manila',
           'path': 'pages/ncr',
           'relpath': 'ncr',
-          'text': "# Metro Manila ## Disaster events ## Affected families and persons ## Deaths, injuries, and missing persons ## Damaged houses ## Damage to agricultural, infrastructure, and private property",
+          'text': "# Metro Manila ## Disaster events Here are the number of disaster events in NCR cities and municipalities according to data in PHIL-DIS: ```yaml table data: data/tabular/disasters_summary_ncr.csv order: - [2, \u0027desc\u0027] columns: - name: PSGC data: ph_psgc type: string - name: City/Municipality data: municity type: string - name: Disaster events data: disasters type: num className: [\u0027dt-right\u0027] ``` ## Affected families and persons Here are the total number of affected families and persons by disaster events in NCR according to data in PHIL-DIS: ```yaml table data: data/tabular/disasters_summary_ncr.csv order: - [3, \u0027desc\u0027] columns: - name: PSGC data: ph_psgc type: string - name: City/Municipality data: municity type: string - name: Affected families data: affected_families type: num-fmt className: [\u0027dt-right\u0027] - name: Affected persons data: affected_persons type: num-fmt className: [\u0027dt-right\u0027] ``` ## Deaths, injuries, and missing persons Here are the total number of deaths, injuries, and missing persons because of disaster events in NCR according to data in PHIL-DIS: ```yaml table data: data/tabular/disasters_summary_ncr.csv order: - [2, \u0027desc\u0027] columns: - name: PSGC data: ph_psgc type: string - name: City/Municipality data: municity type: string - name: Dead data: dead type: num-fmt className: [\u0027dt-right\u0027] - name: Injured data: injured type: num-fmt className: [\u0027dt-right\u0027] - name: Missing data: missing type: num-fmt className: [\u0027dt-right\u0027] ``` ## Damaged houses Here are the total number of damaged houses because of disaster events in NCR according to data in PHIL-DIS: ```yaml table data: data/tabular/disasters_summary_ncr.csv order: - [2, \u0027desc\u0027] columns: - name: PSGC data: ph_psgc type: string - name: City/Municipality data: municity type: string - name: Damaged houses (Full) data: damaged_houses_full type: num-fmt className: [\u0027dt-right\u0027] - name: Damaged houses (Partial) data: damaged_houses_partial type: num-fmt className: [\u0027dt-right\u0027] ``` ## Damage to agricultural, infrastructure, and private property Here are the estimated damage to properties because of disaster events in NCR according to data in PHIL-DIS: ```yaml table data: data/tabular/disasters_summary_ncr.csv order: - [2, \u0027desc\u0027] columns: - name: PSGC data: ph_psgc type: string - name: City/Municipality data: municity type: string - name: Agricultural (in Mil) data: damaged_properties_agri type: num-fmt className: [\u0027dt-right\u0027] - name: Intrastructure (in Mil) data: damaged_properties_infra type: num-fmt className: [\u0027dt-right\u0027] - name: Private (in Mil) data: damaged_properties_private type: num-fmt className: [\u0027dt-right\u0027] - name: Total damage (in Mil) data: damage_total type: num-fmt className: [\u0027dt-right\u0027] ```",
       },
           'pages/provinces': {
           'name': 'Provinces',

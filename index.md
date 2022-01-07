@@ -15,28 +15,10 @@ PHIL-DIS currently has information on: **350** disaster events from **1897** to 
 ## Disaster event timeline
 Number of disaster event data per year in PHIL-DIS: 
 
-```yaml chart
-data:
-    url: data/tabular/disasters_list_all.csv
-height: 400
-width: 800
-mark:
-    type: bar
-    cornerRadiusEnd: 2
-    tooltip: true
-    width:
-        band: 0.8
-encoding:
-    x:
-        timeUnit: year
-        field: date_year
-        type: ordinal
-        title: year
-    y:
-        aggregate: count
-        title: disasters
-    color:
-        field: type
+```json chart
+{% with %}
+{% include 'blocks/charts/timeline_type.json' %}
+{% endwith %}
 ```
 
 ### Timeline of tropical cyclones
@@ -44,9 +26,8 @@ Number of tropical cyclone disaster event data per year in PHIL-DIS:
 
 ```json chart
 {% with type='Tropical Cyclone' %}
-{% include 'blocks/charts/timeline-type.json' %}
+{% include 'blocks/charts/timeline_type.json' %}
 {% endwith %}
-
 ```
 
 ## Disasters per type

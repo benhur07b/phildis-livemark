@@ -1,0 +1,26 @@
+data: data/tabular/disasters_summary_{{ area }}.csv
+order:
+  - [2, 'desc']
+columns:
+  - name: PSGC
+    data: ph_psgc
+    type: string
+  - name: City/Municipality
+    data: municity
+    type: string
+  - name: Agricultural (in Mil)
+    data: damaged_properties_agri
+    type: num-fmt
+    className: ['dt-right']
+  - name: Intrastructure (in Mil)
+    data: damaged_properties_infra
+    type: num-fmt
+    className: ['dt-right']
+  - name: Private (in Mil)
+    data: damaged_properties_private
+    type: num-fmt
+    className: ['dt-right']
+  - name: Total damage (in Mil)
+    data: damage_total
+    type: num-fmt
+    className: ['dt-right']

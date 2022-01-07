@@ -1,0 +1,22 @@
+{
+  "width": 500,
+  "height": 300,
+  "data": {
+    "url": "../data/spatial/phildis_ncr_1.json",
+    "format": {
+      "property": "features"
+    }
+  },
+  "projection": {
+    "type": "mercator"
+  },
+  "mark": {
+    "type": "geoshape"
+  },
+  "encoding": {
+    "color": {
+      "field": "disasters",
+      "type": "quantitative"
+    }
+  }
+}

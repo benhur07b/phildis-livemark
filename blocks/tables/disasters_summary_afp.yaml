@@ -1,0 +1,18 @@
+data: data/tabular/disasters_summary_{{ area }}.csv
+order:
+  - [3, 'desc']
+columns:
+  - name: PSGC
+    data: ph_psgc
+    type: string
+  - name: City/Municipality
+    data: municity
+    type: string
+  - name: Affected families
+    data: affected_families
+    type: num-fmt
+    className: ['dt-right']
+  - name: Affected persons
+    data: affected_persons
+    type: num-fmt
+    className: ['dt-right']
