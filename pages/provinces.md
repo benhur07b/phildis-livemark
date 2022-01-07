@@ -1,15 +1,15 @@
 # Provinces
 
-## Number of disaster events
+## Disaster events
 
 
-## Number of affected families and persons
+## Affected families and persons
 
 
-## Number of deaths, injuries, and missing persons
+## Deaths, injuries, and missing persons
 
 
-## Number of damaged houses
+## Damaged houses
 
 
-## Amount of damage to agricultural, infrastructure, and private property
+## Damage to agricultural, infrastructure, and private property

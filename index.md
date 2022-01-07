@@ -13,7 +13,7 @@ PHIL-DIS currently has information on: **350** disaster events from **1897** to 
 [Help us build a free, open, accurate, and comprehensive Philippine disaster database.](/pages/contrib-data.html)
 
 ## Disaster event timeline
-Here is a timeline of disaster events in the Philippines according to data in PHIL-DIS: 
+Number of disaster event data per year in PHIL-DIS: 
 
 ```yaml chart
 data:
@@ -40,7 +40,7 @@ encoding:
 ```
 
 ### Timeline of tropical cyclones
-Here is a timeline of typhoons in the Philippines according to data in PHIL-DIS:  
+Number of tropical cyclone disaster event data per year in PHIL-DIS:  
 
 ```json chart
 {% with type='Tropical Cyclone' %}

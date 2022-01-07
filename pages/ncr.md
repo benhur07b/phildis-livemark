@@ -1,15 +1,20 @@
 # Metro Manila
 
-## Number of disaster events
+## Disaster events 
+
+```json chart
+{% with field='disasters', title='Number of disaster events', scheme='greens' %}
+{% include 'blocks/maps/map-ncr.json' %}
+{% endwith %}
+```
+
+## Affected families and persons
 
 
-## Number of affected families and persons
+## Deaths, injuries, and missing persons
 
 
-## Number of deaths, injuries, and missing persons
+## Damaged houses
 
 
-## Number of damaged houses
-
-
-## Amount of damage to agricultural, infrastructure, and private property
+## Damage to agricultural, infrastructure, and private property

@@ -1,0 +1,53 @@
+{
+    "width": 600,
+    "height": 900,
+    "data": {
+      "url": "../data/spatial/phildis_ncr.json",
+      "format": {"property": "features"}
+    },
+    "transform": [
+        {
+            "lookup": "properties.ph_psgc",
+            "from": {
+                "data": {
+                "url": "../data/tabular/disasters_summary_ncr.csv"
+                },
+                "key": "ph_psgc",
+                "fields": ["ph_psgc", "{{ field }}"]
+            }
+            },
+        {
+            "calculate": "'#card=' + datum.ph_psgc", "as": "url"
+        }
+    ],
+    "projection": {"type": "mercator"},
+    "mark": {
+        "type": "geoshape",
+        "stroke": "#757575",
+        "strokeWidth": 0.5
+    },
+    "encoding": {
+        "color": {
+            "field": "{{ field }}",
+            "type": "quantitative",
+            "scale": {"scheme": "{{ scheme }}"},
+            "legend": {"title": "{{ title }}"}
+        },
+        "tooltip": [
+            {
+                "field": "properties.ADM3_EN",
+                "type": "nominal",
+                "title": "City/Municipality"
+            },
+            {
+                "field": "{{ field }}",
+                "type": "quantitative",
+                "title": "{{ title }}"
+            }
+        ],
+        "href": {
+            "field": "url", 
+            "type": "nominal"
+        }
+    }
+}
