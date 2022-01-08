@@ -36,6 +36,10 @@ Here are the total number of affected families and persons by disaster events in
 
 ## Deaths, injuries, and missing persons
 
+```html markup
+<iframe title="Deaths, injuries, and missing persons in Philippine provinces because of disasters based on PHIL-DIS data" aria-label="Map" id="datawrapper-chart-VEdBP" src="https://datawrapper.dwcdn.net/VEdBP/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="776"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+</script>
+```
 
 <br><br>
 Here are the total number of deaths, injuries, and missing persons because of disaster events in the Philippine provinces according to data in PHIL-DIS:
@@ -49,6 +53,10 @@ Here are the total number of deaths, injuries, and missing persons because of di
 
 ## Damaged houses
 
+```html markup
+<iframe title="Damaged houses in in Philippine provinces because of disasters based on PHIL-DIS data" aria-label="Map" id="datawrapper-chart-8BLQr" src="https://datawrapper.dwcdn.net/8BLQr/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="776"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+</script>
+```
 
 <br><br>
 Here are the total number of damaged houses because of disaster events in the Philippine provinces according to data in PHIL-DIS:
@@ -62,6 +70,10 @@ Here are the total number of damaged houses because of disaster events in the Ph
 
 ## Damage to agricultural, infrastructure, and private property
 
+```html markup
+<iframe title="Damage to property in Philippine provinces due to disasters based on PHIL-DIS data" aria-label="Map" id="datawrapper-chart-amdnU" src="https://datawrapper.dwcdn.net/amdnU/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="776"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+</script>
+```
 
 <br><br>
 Here are the estimated damage to properties because of disaster events in the Philippine provinces according to data in PHIL-DIS:
