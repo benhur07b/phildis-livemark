@@ -5,8 +5,8 @@ columns:
   - name: PSGC
     data: ph_psgc
     type: string
-  - name: City/Municipality
-    data: municity
+  - name: {{ name }}
+    data: {{ namefield }}
     type: string
   - name: Damaged houses (Full)
     data: damaged_houses_full

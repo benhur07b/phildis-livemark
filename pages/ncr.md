@@ -11,7 +11,7 @@
 Here are the number of disaster events in NCR cities and municipalities according to data in PHIL-DIS:
 
 ```yaml table
-{% with area='ncr' %}
+{% with area='ncr', name='City/Municipality', namefield='municity' %}
 {% include 'blocks/tables/disasters_summary_events.yaml' %}
 {% endwith %}
 
@@ -28,7 +28,7 @@ Here are the number of disaster events in NCR cities and municipalities accordin
 Here are the total number of affected families and persons by disaster events in NCR according to data in PHIL-DIS:
 
 ```yaml table
-{% with area='ncr' %}
+{% with area='ncr', name='City/Municipality', namefield='municity' %}
 {% include 'blocks/tables/disasters_summary_afp.yaml' %}
 {% endwith %}
 
@@ -40,11 +40,12 @@ Here are the total number of affected families and persons by disaster events in
 <iframe title="Deaths, injuries, and missing persons in Metro Manila because of disasters based on PHIL-DIS data" aria-label="Map" id="datawrapper-chart-w864w" src="https://datawrapper.dwcdn.net/w864w/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="776"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
 </script>
 ```
+
 <br><br>
 Here are the total number of deaths, injuries, and missing persons because of disaster events in NCR according to data in PHIL-DIS:
 
 ```yaml table
-{% with area='ncr' %}
+{% with area='ncr', name='City/Municipality', namefield='municity' %}
 {% include 'blocks/tables/disasters_summary_dim.yaml' %}
 {% endwith %}
 
@@ -60,7 +61,7 @@ Here are the total number of deaths, injuries, and missing persons because of di
 Here are the total number of damaged houses because of disaster events in NCR according to data in PHIL-DIS:
 
 ```yaml table
-{% with area='ncr' %}
+{% with area='ncr', name='City/Municipality', namefield='municity' %}
 {% include 'blocks/tables/disasters_summary_dh.yaml' %}
 {% endwith %}
 
@@ -77,7 +78,7 @@ Here are the total number of damaged houses because of disaster events in NCR ac
 Here are the estimated damage to properties because of disaster events in NCR according to data in PHIL-DIS:
 
 ```yaml table
-{% with area='ncr' %}
+{% with area='ncr', name='City/Municipality', namefield='municity' %}
 {% include 'blocks/tables/disasters_summary_aip.yaml' %}
 {% endwith %}
 

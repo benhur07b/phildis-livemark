@@ -10,4 +10,4 @@ College of Social Sciences and Philosophy<br>
 University of the Philippines Diliman
 
 ## Improve the website, charts, etc.
-Found a bug, typo, or want to improve the PHIL-DIS website? Send us a Pull Request on GitHub. The PHIL-DIS website is built with Livemark which is open source.
+Found a bug, typo, or want to improve the PHIL-DIS website? Send us a Pull Request on [GitHub](https://github.com/benhur07b/phildis-livemark). The PHIL-DIS website is built with Livemark which is open source.
