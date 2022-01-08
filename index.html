@@ -1193,6 +1193,8 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
     background-color: #f8f8f8 !important;
   }
 
+  #map { height: 180px; }
+
 </style>
 <style>
 
@@ -1924,7 +1926,7 @@ University of the Philippines Diliman</p>
   <div>
         <div class="next">
       <a href="/pages/ncr.html">
-        Metro Manila »
+        Metro Manila  »
       </a>
     </div>
           </div>
@@ -2309,10 +2311,10 @@ document.addEventListener("DOMContentLoaded", function () {
           'text': "# Philippines Disaster Information System (PHIL-DIS) Project ```yaml remark type: primary text: PHIL-DIS is a continuous work in progress. The data provided by PHIL-DIS is only as accurate and precise as its sources\u2014e.g. official government reports. ``` The Philippines Disaster Information System (PHIL-DIS) was developed to establish a database for disasters in the Philippines that explicitly includes spatial information. PHIL-DIS aims to gather data on disaster events from official government reports, map disaster events and their patterns in the country, produce a web-based platform that has a capacity to display textual, tabular, visual and spatial information on disaster events, and formulate a template that can be used to systematically gather data on disaster events. ## Status PHIL-DIS currently has information on: **350** disaster events from **1897** to **2017**. [Help us build a free, open, accurate, and comprehensive Philippine disaster database.](/pages/contrib-data.html) ## Disaster event timeline Number of disaster event data per year in PHIL-DIS: ```json chart { \"height\": 400, \"width\": 800, \"data\": {\"url\": \"data/tabular/disasters_list_all.csv\"}, \"transform\": [ { \"filter\": \"datum.type\" } ], \"mark\": { \"type\": \"bar\", \"cornerRadiusEnd\": 2, \"tooltip\": true, \"width\": { \"band\": 0.8 } }, \"encoding\": { \"x\": { \"timeUnit\": \"year\", \"field\": \"date_year\", \"type\": \"ordinal\", \"title\": \"year\" }, \"y\": { \"aggregate\": \"count\", \"title\": \"disasters\" }, \"color\": { \"field\": \"type\" } } } ``` ### Timeline of tropical cyclones Number of tropical cyclone disaster event data per year in PHIL-DIS: ```json chart { \"height\": 400, \"width\": 800, \"data\": {\"url\": \"data/tabular/disasters_list_all.csv\"}, \"transform\": [ { \"filter\": \"datum.type==\u0027Tropical Cyclone\u0027\" } ], \"mark\": { \"type\": \"bar\", \"cornerRadiusEnd\": 2, \"tooltip\": true, \"width\": { \"band\": 0.8 } }, \"encoding\": { \"x\": { \"timeUnit\": \"year\", \"field\": \"date_year\", \"type\": \"ordinal\", \"title\": \"year\" }, \"y\": { \"aggregate\": \"count\", \"title\": \"disasters\" }, \"color\": { \"field\": \"type\" } } } ``` ## Disasters per type Here are the total number of disasters per type in PHIL-DIS: ```yaml chart data: url: data/tabular/disasters_list_all.csv height: 600 width: 600 mark: type: bar cornerRadiusEnd: 2 tooltip: true height: band: 0.8 encoding: x: aggregate: count title: disasters field: type type: quantitative axis: grid: false labelFontSize: 13 y: field: type type: ordinal title: false sort: -x axis: labelFontSize: 13 ``` ## Contact us DEPARTMENT OF GEOGRAPHY College of Social Sciences and Philosophy University of the Philippines Diliman",
       },
           'pages/ncr': {
-          'name': 'Metro Manila',
+          'name': 'Metro Manila ',
           'path': 'pages/ncr',
           'relpath': 'pages/ncr',
-          'text': "# Metro Manila ## Disaster events ```yaml table {% with area=\u0027ncr\u0027 %} {% include \u0027blocks/tables/disasters_summary.yaml\u0027 %} {% endwith %} ``` ## Affected families and persons ## Deaths, injuries, and missing persons ## Damaged houses ## Damage to agricultural, infrastructure, and private property",
+          'text': "# Metro Manila ## Disaster events ```html markup !function(){\"use strict\";window.addEventListener(\"message\",(function(e){if(void 0!==e.data[\"datawrapper-height\"]){var t=document.querySelectorAll(\"iframe\");for(var a in e.data[\"datawrapper-height\"])for(var r=0;r ``` Here are the number of disaster events in NCR cities and municipalities according to data in PHIL-DIS: ```yaml table {% with area=\u0027ncr\u0027 %} {% include \u0027blocks/tables/disasters_summary_events.yaml\u0027 %} {% endwith %} ``` ## Affected families and persons Here are the total number of affected families and persons by disaster events in NCR according to data in PHIL-DIS: ```yaml table {% with area=\u0027ncr\u0027 %} {% include \u0027blocks/tables/disasters_summary_afp.yaml\u0027 %} {% endwith %} ``` ## Deaths, injuries, and missing persons Here are the total number of deaths, injuries, and missing persons because of disaster events in NCR according to data in PHIL-DIS: ```yaml table {% with area=\u0027ncr\u0027 %} {% include \u0027blocks/tables/disasters_summary_dim.yaml\u0027 %} {% endwith %} ``` ## Damaged houses Here are the total number of damaged houses because of disaster events in NCR according to data in PHIL-DIS: ```yaml table {% with area=\u0027ncr\u0027 %} {% include \u0027blocks/tables/disasters_summary_dh.yaml\u0027 %} {% endwith %} ``` ## Damage to agricultural, infrastructure, and private property Here are the estimated damage to properties because of disaster events in NCR according to data in PHIL-DIS: ```yaml table {% with area=\u0027ncr\u0027 %} {% include \u0027blocks/tables/disasters_summary_aip.yaml\u0027 %} {% endwith %} ```",
       },
           'pages/provinces': {
           'name': 'Provinces',
